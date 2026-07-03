@@ -1,0 +1,29 @@
+[project]
+name = "canopy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "anish", email = "anishkrishnan@berkeley.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "networkx>=3.6.1",
+    "pydantic>=2.13.4",
+    "rich>=15.0.0",
+    "tiktoken>=0.13.0",
+]
+
+[project.scripts]
+canopy = "canopy:main"
+
+[build-system]
+requires = ["uv_build>=0.9.4,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "pytest>=9.1.1",
+    "ruff>=0.15.20",
+]
