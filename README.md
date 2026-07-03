@@ -2,7 +2,7 @@
 
 > Runtime context allocation for long-running AI agents.
 
-Canopy is an open-source runtime that manages an AI agent's working memory.
+canopy is an open-source runtime that manages an AI agent's working memory.
 
 Instead of continually appending every tool call, observation, and reasoning step into an ever-growing context window, Canopy dynamically allocates context by deciding what should remain active, what should be summarized, what should become passive, and what should be retrieved only when necessary.
 
