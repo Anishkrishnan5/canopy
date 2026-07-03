@@ -4,7 +4,7 @@
 
 canopy is an open-source runtime that manages an AI agent's working memory.
 
-Instead of continually appending every tool call, observation, and reasoning step into an ever-growing context window, Canopy dynamically allocates context by deciding what should remain active, what should be summarized, what should become passive, and what should be retrieved only when necessary.
+Instead of continually appending every tool call, observation, and reasoning step into an ever-growing context window, canopy dynamically allocates context by deciding what should remain active, what should be summarized, what should become passive, and what should be retrieved only when necessary.
 
 The goal is to make long-running agents:
 
@@ -25,11 +25,11 @@ Current approaches typically rely on:
 - Periodic summarization
 - Retrieval from long-term memory
 
-Canopy approaches the problem differently.
+canopy approaches the problem differently.
 
-Instead of treating context as a log, Canopy treats it as **working memory**.
+Instead of treating context as a log, canopy treats it as **working memory**.
 
-Before every LLM call, Canopy assembles the smallest useful context window from the agent's current task state.
+Before every LLM call, canopy assembles the smallest useful context window from the agent's current task state.
 
 ---
 
@@ -51,39 +51,10 @@ Every memory belongs to one of several categories:
                 Agent
                   │
                   ▼
-          Canopy Runtime
+          canopy Runtime
                   │
         Context Allocation
                   │
                   ▼
                 LLM
 ```
-
----
-
-## Roadmap
-
-### Phase 1
-
-- Runtime middleware
-- Memory model
-- Context allocator
-- Token budgeting
-
-### Phase 2
-
-- Summarization
-- Memory retrieval
-- Branch-aware context
-
-### Phase 3
-
-- Canopy Inspector
-- Benchmarks
-- Framework integrations
-
----
-
-## Status
-
-🚧 Early development
